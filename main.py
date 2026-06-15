@@ -4,8 +4,8 @@ from ports import parse_ports
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host")
-    parser.add_argument("--ports")
+    parser.add_argument("--host", required=True)
+    parser.add_argument("--ports", required=True)
     args = parser.parse_args()
     ports = parse_ports(args.ports)
     for port in ports:
