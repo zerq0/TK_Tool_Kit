@@ -24,3 +24,9 @@ Build a small, ethical TCP port scanner that demonstrates:
 ## Ethics
 
 Only scan systems you own or have permission to test.
+
+## Usage
+
+```bash
+python3 main.py
+```
