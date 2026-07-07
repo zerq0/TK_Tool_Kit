@@ -3,7 +3,7 @@ def parse_ports(ports):
     ports_list = set()
     for x in splitted:
         x = x.strip()
-        if x == "":
+        if x == "" or x == " ":
             raise ValueError("Invalid port input")
         if "-" in x:
             start, end = x.split("-")
@@ -17,6 +17,7 @@ def parse_ports(ports):
             port = int(x)
             if port >=1 and port <= 65535:
                 ports_list.add(port)
-
+            else:
+                raise ValueError("Port out of range")
     return sorted(ports_list)
     
