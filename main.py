@@ -13,6 +13,7 @@ def main():
     parser.add_argument("--onlyopen")   
     args = parser.parse_args()
     ports = parse_ports(args.ports)
+    print(f"Scanning {args.host} on ports {ports}")
     for port in ports:
         status,message = scan_port(args.host,port)
         print(message)

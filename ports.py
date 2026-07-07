@@ -1,6 +1,7 @@
 def parse_ports(ports):
     splitted = ports.strip().split(",")
     ports_list = set()
+    
     for x in splitted:
         x = x.strip()
         if x == "" or x == " ":
